@@ -154,9 +154,5 @@ n ()
 
 # To help while invoking shell from within nnn
 [ -n "$NNNLVL" ] && PS1="N$NNNLVL $PS1"
-# Install Ruby Gems to ~/gems
-export GEM_HOME="$HOME/gems"
-export PATH="$HOME/gems/bin:$PATH"
-. "$HOME/.cargo/env"
 alias config='/usr/bin/git --git-dir=/home/rishi/.cfg/ --work-tree=/home/rishi'
 alias n='n -A'
