@@ -120,7 +120,7 @@ PATH="$HOME/bin:$PATH"
 
 
 # nnn cd on quit
-n ()
+nn ()
 {
     # Block nesting of nnn in subshells
     if [[ "${NNNLVL:-0}" -ge 1 ]]; then
@@ -154,5 +154,3 @@ n ()
 
 # To help while invoking shell from within nnn
 [ -n "$NNNLVL" ] && PS1="N$NNNLVL $PS1"
-alias config='/usr/bin/git --git-dir=/home/rishi/.cfg/ --work-tree=/home/rishi'
-alias n='n -A'
