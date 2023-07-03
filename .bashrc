@@ -116,8 +116,8 @@ if ! shopt -oq posix; then
   fi
 fi
 
-PATH="$HOME/bin:$PATH"
-
+#export PATH="$HOME/bin:$HOME/scripts:$PATH"
+export PATH="$HOME/scripts:$PATH"
 
 # nnn cd on quit
 nn ()
@@ -154,3 +154,7 @@ nn ()
 
 # To help while invoking shell from within nnn
 [ -n "$NNNLVL" ] && PS1="N$NNNLVL $PS1"
+
+export NNN_PLUG='p:preview-tui;f:finder;o:fzopen;p:mocq;d:diffs;t:nmount;v:imgview'
+export EDITOR=nvim
+
