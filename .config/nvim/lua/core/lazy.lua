@@ -14,42 +14,34 @@ vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = " "
 
 require("lazy").setup({
-	-- the colorscheme should be available when starting Neovim
+  -- the colorscheme should be available when starting Neovim
   {
-  "tanvirtin/monokai.nvim",
-    lazy = false, -- make sure we load this during startup if it is your main colorscheme
+    "tanvirtin/monokai.nvim",
+    lazy = false,    -- make sure we load this during startup if it is your main colorscheme
     priority = 1000, -- make sure to load this before all the other start plugins
     config = function()
       -- load the colorscheme here
       vim.cmd([[colorscheme monokai]])
     end,
   },
-
-    "tomasiser/vim-code-dark",
-  "folke/which-key.nvim",
   "lambdalisue/fern.vim",
   "neovim/nvim-lspconfig",
-  {
-	"luukvbaal/nnn.nvim",
-	config = function()
-		require("nnn").setup()
-	end,
-  },
   { "folke/neoconf.nvim", cmd = "Neoconf" },
   {
     'windwp/nvim-autopairs',
     event = "InsertEnter",
     opts = {} -- this is equalent to setup({}) function
   },
-  { "nvim-lualine/lualine.nvim",
+  {
+    "nvim-lualine/lualine.nvim",
     dependencies = {
-        "kyazdani42/nvim-web-devicons",
+      "kyazdani42/nvim-web-devicons",
     },
   },
   {
-        "karb94/neoscroll.nvim",
-  config = function ()
-    require('neoscroll').setup {}
-  end
+    "karb94/neoscroll.nvim",
+    config = function()
+      require('neoscroll').setup {}
+    end
   }
 })
