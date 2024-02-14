@@ -21,6 +21,8 @@ map('i', 'jk', '<Esc>')
 -- Fast saving with <leader> and s
 map('n', '<leader>s', ':w<CR>')
 
+map('n', '<leader>f', ':Fern .<CR>')
+
 -- Move around splits using Ctrl + {h,j,k,l}
 map('n', '<C-h>', '<C-w>h')
 map('n', '<C-j>', '<C-w>j')
